@@ -1,0 +1,33 @@
+
+
+
+<!doctype html>
+<html  ng-app='ShoppingListDirectiveApp' lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <link rel="stylesheet" href="styles/bootstrap.min.css"> -->
+        <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+  </head>
+<body>
+   <div class="container" ng-controller='NarrowItDownController  as NarDownCTRL'>
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+    <div class="form-group">
+      <input type="text" placeholder="search term" class="form-control" ng-model = "NarDownCTRL.searchFor">
+    </div>
+    <div class="form-group narrow-button">
+      <button class="btn btn-primary" ng-click = "NarDownCTRL.getAll()" >Narrow It Down For Me!</button>
+    </div>
+
+  
+    <found-items 
+    search = "{{NarDownCTRL.searchFor}}"
+    items="NarDownCTRL.found" 
+    on-remove="NarDownCTRL.removeItem(index)"></found-items>
+  </div>
+
+</body>
+</html>
