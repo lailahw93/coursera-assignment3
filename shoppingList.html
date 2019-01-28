@@ -1,12 +1,15 @@
-<h3>mySearch: {{ list.mySearch }}</h3>
+<!-- <h3>mySearch: {{ list.mySearch }}</h3> -->
 <ol>
   <li ng-repeat="item in list.items">
-    <p>name is : {{ item.name }} </p>
-    <p >
+    <p>{{ item.name }} </p>
+    <pre>
 	
-	special_instructions is: {{item.special_instructions}}
-     </p>
+	short_name is: {{item.short_name}}
 
-    <button ng-click="list.onRemove({index: $index});">Remove Item</button>
+	description :{{item.description}}
+     </pre>
+
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ol>
+

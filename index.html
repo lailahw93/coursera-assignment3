@@ -21,7 +21,7 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click = "NarDownCTRL.getAll()" >Narrow It Down For Me!</button>
     </div>
-
+    <span ng-if="NarDownCTRL.showError">Nothing found.</span>
   
     <found-items 
     search = "{{NarDownCTRL.searchFor}}"
